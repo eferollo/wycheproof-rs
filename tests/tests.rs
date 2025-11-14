@@ -186,3 +186,21 @@ fn test_mldsa_verify_parsing() -> Result<(), wycheproof::WycheproofError> {
     }
     Ok(())
 }
+
+#[cfg(feature = "composite_mldsa_sign")]
+#[test]
+fn test_composite_mldsa_sign_parsing() -> Result<(), wycheproof::WycheproofError> {
+    for test in wycheproof::composite_mldsa_sign::TestName::all() {
+        let _kat = wycheproof::composite_mldsa_sign::TestSet::load(test)?;
+    }
+    Ok(())
+}
+
+#[cfg(feature = "composite_mldsa_verify")]
+#[test]
+fn test_composite_mldsa_verify_parsing() -> Result<(), wycheproof::WycheproofError> {
+    for test in wycheproof::composite_mldsa_verify::TestName::all() {
+        let _kat = wycheproof::composite_mldsa_verify::TestSet::load(test)?;
+    }
+    Ok(())
+}
