@@ -625,3 +625,9 @@ pub mod mldsa_sign;
 
 #[cfg(feature = "mldsa_verify")]
 pub mod mldsa_verify;
+
+#[cfg(feature = "composite_mldsa_sign")]
+pub mod composite_mldsa_sign;
+
+#[cfg(feature = "composite_mldsa_verify")]
+pub mod composite_mldsa_verify;
