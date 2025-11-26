@@ -5,16 +5,19 @@ use super::*;
 define_test_set!("Composite-MLDSA Sign", "composite_mldsa_sign_schema.json");
 
 define_test_set_names!(
+    MlDsa44Ed25519 => "mldsa44ed25519_sign",
     MlDsa65Ed25519 => "mldsa65ed25519_sign",
 );
 
 define_algorithm_map!(
+    "MLDSA44-Ed25519-SHA512" => MlDsa44Ed25519,
     "MLDSA65-Ed25519-SHA512" => MlDsa65Ed25519,
 );
 
 define_test_flags!(ValidSignature,);
 
 define_test_group_type_id!(
+    "MlDsa44Ed25519Sign" => MlDsa44Ed25519Sign,
     "MlDsa65Ed25519Sign" => MlDsa65Ed25519Sign,
 );
 
